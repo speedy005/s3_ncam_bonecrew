@@ -13,9 +13,9 @@ gitcheckout(){
 	if [ -d "${repodir}" ]
 	then
 		rm -rf "${repodir}"
-		printf "$p_l\n  $txt_delete oscam-${REPO} $re_\n"
+		printf "$p_l\n  $txt_delete ncam-${REPO} $re_\n"
 	else
-		printf "$p_l\n  $txt_no oscam-${REPO} $txt_found\n$re_"
+		printf "$p_l\n  $txt_no ncam-${REPO} $txt_found\n$re_"
 	fi
 
 	printf "$w_l  ${REPO^^} Repository: $g_l$trunkurl$re_"
@@ -46,7 +46,7 @@ gitup(){
 
 	if [ -d "${repodir}" ]
 	then
-		printf "$p_l\n  $txt_update oscam-${REPO} $re_\n"
+		printf "$p_l\n  $txt_update ncam-${REPO} $re_\n"
 	else
 		checkout
 		return
