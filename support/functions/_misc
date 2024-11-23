@@ -318,7 +318,7 @@ _oscam_extra_menu(){
 		fi
 	done
 
-	oextra=$("$gui" "$st_" "$nc_" "$bt_" "$title_" --title "-[ Oscam EXTRA$(TTAG) ]-" "$cl_" " OPTIONS " 19 40 12 ${MENU_OPTIONS[@]});
+	oextra=$("$gui" "$st_" "$nc_" "$bt_" "$title_" --title "-[ Ncam EXTRA$(TTAG) ]-" "$cl_" " OPTIONS " 19 40 12 ${MENU_OPTIONS[@]});
 	[ $? = 255 ] && _toolchain_config_menu
 
 	for e in $(printf '%s\n' "${!USE_vars[@]}" | sort -u | xargs)

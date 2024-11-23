@@ -191,7 +191,7 @@ _gui_build(){
 	sleep 1
 
 #remove debug binary
-	if [ "${s3cfg_vars[delete_oscamdebugbinary]}" == "1" ] && [ -f "$bdir/$oscam_name.debug" ]
+	if [ "${s3cfg_vars[delete_ncamdebugbinary]}" == "1" ] && [ -f "$bdir/$oscam_name.debug" ]
 	then
 		rm "$bdir/$oscam_name.debug"
 		printf "\n $txt_delete $oscam_name.debug\n"|tee -a "$ldir/$log_name"

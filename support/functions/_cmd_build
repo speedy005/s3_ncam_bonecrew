@@ -232,9 +232,9 @@ printf "$y_l\n |       set : ${cdtag}$w_l"
 	check_signing
 
 #build
-if [ ${#USE_vars[USE_OSCAMNAME]} -gt 0 ]
+if [ ${#USE_vars[USE_NCAMNAME]} -gt 0 ]
 then
-	oscam_name=$(echo ${USE_vars[USE_OSCAMNAME]} |cut -d "=" -f2)
+	oscam_name=$(echo ${USE_vars[USE_NCAMNAME]} |cut -d "=" -f2)
 else
 	_generate_oscam_name "$_toolchainname" "$extra$buildtype"
 fi

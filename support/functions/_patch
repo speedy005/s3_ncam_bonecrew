@@ -201,7 +201,7 @@ patch_webif(){
 
 		#show patch file information in oscam WebIf
 		sed -i '/^#define S3PATCHED/d' "${repodir}/config.h"
-		sed -i "/^#endif \/\/OSCAM_CONFIG_H_/s/^/#define S3PATCHED \""$(printf '%q' $patches)"\"\n/" "${repodir}/config.h"
+		sed -i "/^#endif \/\/NCAM_CONFIG_H_/s/^/#define S3PATCHED \""$(printf '%q' $patches)"\"\n/" "${repodir}/config.h"
 		sed -i '/#ifdef S3PATCHED/,+3d' "${repodir}/oscam.c"
 		sed -i "/fprintf(fp, \"WebifPort:.*/s/$/\n#endif\n\n#ifdef S3PATCHED\n\tfprintf(fp, \"Patched:\\\t\%s\\\n\", S3PATCHED)\;/" "${repodir}/oscam.c"
 	fi
