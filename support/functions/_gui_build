@@ -99,7 +99,7 @@ _gui_build(){
 	fi
 
 #IF SVN is Patched
-	if [ -f "$ispatched" ]
+	if [ -f "$workdir/${REPO^^}-IS-PATCHED" ]
 	then
 		patch_webif
 	fi
@@ -195,7 +195,7 @@ _gui_build(){
 	then
 		rm "$bdir/$oscam_name.debug"
 		printf "\n $txt_delete $oscam_name.debug\n"|tee -a "$ldir/$log_name"
-	fi;) | "$gui" "$st_" --colors --title " -[ Build$(REPOIDENT) ]- " "$pb_" "$_lines" "$_cols"
+	fi;) | "$gui" "$st_" --colors --title " -[ Build$(TTAG) ]- " "$pb_" "$_lines" "$_cols"
 	sleep 2
 
 #tar
