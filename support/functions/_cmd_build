@@ -290,7 +290,7 @@ fi
 	fi
 
 #remove debug binary
-	if [ "${s3cfg_vars[delete_oscamdebugbinary]}" == "1" ] && [ -f "$bdir/$oscam_name.debug" ]
+	if [ "${s3cfg_vars[delete_ncamdebugbinary]}" == "1" ] && [ -f "$bdir/$oscam_name.debug" ]
 	then
 		printf "$r_l"" REMOVE ----->  $w_l$bdir/$oscam_name.debug"
 		rm "$bdir/$oscam_name.debug"
